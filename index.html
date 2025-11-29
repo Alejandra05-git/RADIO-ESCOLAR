@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Escolar - Tu voz, tu música, tu radio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="navigateTo('home')">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="2"></circle>
+                    <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+                </svg>
+                <span class="logo-text">Radio Escolar</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                <svg class="menu-icon" id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <button class="nav-link" onclick="navigateTo('home')">Inicio</button>
+                <button class="nav-link" onclick="navigateTo('historias')">Historias Mágicas</button>
+                <button class="nav-link" onclick="navigateTo('sodapop')">Zona Pop</button>
+                <button class="nav-link" onclick="navigateTo('noticero')">Noticiero Escolar</button>
+                <button class="nav-link" onclick="navigateTo('credits')">Créditos</button>
+            </div>
+
+            <div class="nav-menu-mobile" id="navMenuMobile">
+                <button class="nav-link-mobile" onclick="navigateTo('home'); toggleMenu()">Inicio</button>
+                <button class="nav-link-mobile" onclick="navigateTo('historias'); toggleMenu()">Historias Mágicas</button>
+                <button class="nav-link-mobile" onclick="navigateTo('sodapop'); toggleMenu()">Zona Pop</button>
+                <button class="nav-link-mobile" onclick="navigateTo('noticero'); toggleMenu()">Noticiero Escolar</button>
+                <button class="nav-link-mobile" onclick="navigateTo('credits'); toggleMenu()">Créditos</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Página Principal -->
+    <div id="homePage" class="page active">
+        <!-- Hero con Imagen de Fondo -->
+        <div class="hero-image-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content-wrapper">
+                <h1 class="hero-image-title">Comunidad Visionaria</h1>
+                <p class="hero-image-subtitle">La frecuencia donde todos somos visión y futuro.</p>
+                <button class="hero-btn" onclick="document.getElementById('programacion').scrollIntoView({behavior: 'smooth'})">
+                    Ver programación
+                </button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero-section">
+                <div class="logo-circle">
+                    <svg class="hero-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+                    </svg>
+                </div>
+                <h1 class="hero-title">Colegio Visión Mundial</h1>
+
+                <p class="hero-subtitle">¡Tu voz, tu música, tu radio!</p>
+            </div>
+
+            <div class="main-player">
+                <div class="audio-player main" data-src="audio/jingle_principal.mp3">
+                    <div class="player-content">
+                        <button class="play-btn">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </button>
+                        <div class="player-info">
+                            <p class="player-title">Jingle de Radio Escolar</p>
+                            <p class="player-type">Jingle Principal</p>
+                        </div>
+                        <svg class="volume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Institucional -->
+            <div class="institutional-section">
+                <h2 class="section-title institutional">Nuestra Institución</h2>
+                <div class="institutional-grid">
+                    <div class="institutional-card">
+                        <div class="institutional-icon">🎯</div>
+                        <h3 class="institutional-card-title">Misión</h3>
+                        <p class="institutional-text">Brindar una formación integral que fortalezca los valores, habilidades y conocimientos de nuestros estudiantes, promoviendo una educación de excelencia que impulse su crecimiento personal y su participación activa en la comunidad.</p>
+                    </div>
+                    <div class="institutional-card">
+                        <div class="institutional-icon">☀️</div>
+                        <h3 class="institutional-card-title">Visión</h3>
+                        <p class="institutional-text">Ser una institución referente por su calidad educativa, formando ciudadanos críticos, innovadores y comprometidos con el progreso sostenible de la sociedad, proyectándonos hacia el año 2030 como un modelo de transformación y liderazgo.</p>
+                    </div>
+                    <div class="institutional-card">
+                        <div class="institutional-icon">🛡️</div>
+                        <h3 class="institutional-card-title">Valores</h3>
+                        <p class="institutional-text">Respeto, compromiso, responsabilidad, solidaridad y honestidad constituyen la base de nuestra labor educativa, orientando cada proceso de enseñanza y acompañando el desarrollo integral de nuestros estudiantes.</p>
+                    </div>
+                </div>
+
+                <div class="shield-section">
+                    <h3 class="shield-title">Escudo Institucional</h3>
+                    <div class="shield-container">
+                        <img src="images/escudo.png" alt="Escudo Institucional" class="shield-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="shield-placeholder">
+                            <span class="shield-emoji">🏫</span>
+                            <p class="shield-text">Coloca tu escudo en:<br>images/escudo.png</p>
+                        </div>
+                    </div>
+                    <p class="shield-description">Nuestro escudo representa la identidad y los valores fundamentales de nuestra institución educativa.</p>
+                </div>
+            </div>
+
+            <!-- Programas Destacados -->
+            <div class="programs-grid">
+                <div class="program-card historias" onclick="navigateTo('historias')">
+                    <div class="program-header">
+                        <span class="program-icon">📚</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Historias Mágicas</h3>
+                        <p class="program-type">Ficción</p>
+                        <p class="program-description">Viaja a mundos imaginarios con nuestras historias llenas de magia, aventura y personajes inolvidables.</p>
+                        <div class="program-schedule">
+                            <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Lunes y Miércoles - 2:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card sodapop" onclick="navigateTo('sodapop')">
+                    <div class="program-header">
+                        <span class="program-icon">🎵</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">zona Pop</h3>
+                        <p class="program-type">Entretenimiento</p>
+                        <p class="program-description">¡La música más fresca, juegos divertidos y las últimas tendencias! Diversión garantizada para tu tarde.</p>
+                        <div class="program-schedule">
+                            <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Martes y Jueves - 3:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card noticiero" onclick="navigateTo('noticero')">
+                    <div class="program-header">
+                        <span class="program-icon">📰</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Noticiero Escolar</h3>
+                        <p class="program-type">Informativo</p>
+                        <p class="program-description">Mantente al día con las noticias más importantes de nuestra escuela y el mundo que nos rodea.</p>
+                        <div class="program-schedule">
+                            <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Viernes - 1:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parrilla de Programación -->
+            <div class="schedule-section" id="programacion">
+                <h2 class="section-title">Parrilla de Programación</h2>
+                <div class="schedule-wrapper">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th class="schedule-header time">HORARIO</th>
+                                <th class="schedule-header">LUNES</th>
+                                <th class="schedule-header">MARTES</th>
+                                <th class="schedule-header">MIÉRCOLES</th>
+                                <th class="schedule-header">JUEVES</th>
+                                <th class="schedule-header">VIERNES</th>
+                                <th class="schedule-header">SÁBADO</th>
+                                <th class="schedule-header">DOMINGO</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleBody">
+                            <!-- Se genera dinámicamente con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Páginas de Programas (se generan dinámicamente) -->
+    <div id="historiasPage" class="page"></div>
+    <div id="sodapopPage" class="page"></div>
+    <div id="noticeroPage" class="page"></div>
+
+    <!-- Página de Créditos -->
+    <div id="creditsPage" class="page">
+        <div class="container">
+            <div class="credits-header">
+                <h1 class="credits-title">Nuestro Equipo</h1>
+                <p class="credits-subtitle">Creatividad y pasión en cada emisión. </p>
+                    <p class="credits-subtitle"></p> <strong> Somos ritmo, somos visión.</strong> </p>
+            </div>
+
+            <div class="team-grid" id="teamGrid">
+                <!-- Se genera dinámicamente con JavaScript -->
+            </div>
+
+            <div class="credits-back">
+                <button class="back-btn" onclick="navigateTo('home')">Volver al Inicio</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="2"></circle>
+                <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+            </svg>
+            <p class="footer-title">Radio Escolar</p>
+            <p class="footer-subtitle">La voz de nuestra comunidad estudiantil</p>
+            <p class="footer-copy">© 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
