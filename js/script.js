@@ -88,10 +88,10 @@ const scheduleData = {
 
 // Datos del equipo
 const teamMembers = [
-    { name: 'Alejandra Agamez', role: 'Editora-productora-locutora-guionista-voz', image: 'images/team/andrea.jpg', color: 'pink' },
-    { name: 'Jaider Carrascal', role: 'Director-Editor-Voz', image: 'images/team/daniel.jpg', color: 'cyan' },
-    { name: 'Vanessa Gulfo', role: 'Presentadora-voz-Editor de Sonido y Efectos Especiales', image: 'images/team/gabriel.jpg', color: 'orange' },
-    { name: 'Cristian Castaño', role: 'Productor-Editor', image: 'images/team/maria.jpg', color: 'purple' },
+    { name: 'Alejandra Agamez', role: 'Editora-productora-locutora-guionista-voz', image: 'images/team/Alejandra.jpeg', color: 'pink' },
+    { name: 'Jaider Carrascal', role: 'Director-Editor-Voz', image: 'images/team/Jaider.jpeg', color: 'cyan' },
+    { name: 'Vanessa Gulfo', role: 'Presentadora-voz-Editor de Sonido y Efectos', image: 'images/team/Vanessa.jpeg', color: 'orange' },
+    { name: 'Cristian Castaño', role: 'Productor-Editor', image: 'images/team/cristian.jpeg', color: 'purple' },
    
 ];
 
